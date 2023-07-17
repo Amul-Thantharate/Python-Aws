@@ -1,0 +1,233 @@
+{
+  "version": "0",
+  "id": "bb21c432-c1a9-4012-287e-49c920c6c5fe",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "473132532554",
+  "time": "2023-07-13T07:50:28Z",
+  "region": "us-east-1",
+  "resources": [],
+  "detail": {
+    "eventVersion": "1.08",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDAW4KHFQNFM7ER3WQAR",
+      "arn": "arn:aws:iam::473132532554:user/Amul",
+      "accountId": "473132532554",
+      "accessKeyId": "ASIAW4KHFQNFCCSFRRVO",
+      "userName": "Amul",
+      "sessionContext": {
+        "sessionIssuer": {},
+        "webIdFederationData": {},
+        "attributes": {
+          "creationDate": "2023-07-13T07:49:31Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "eventTime": "2023-07-13T07:50:28Z",
+    "eventSource": "ec2.amazonaws.com",
+    "eventName": "RunInstances",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "103.100.192.227",
+    "userAgent": "AWS Internal",
+    "requestParameters": {
+      "instancesSet": {
+        "items": [
+          {
+            "imageId": "ami-06ca3ca175f37dd66",
+            "minCount": 1,
+            "maxCount": 1,
+            "keyName": "passbolt"
+          }
+        ]
+      },
+      "instanceType": "t2.micro",
+      "blockDeviceMapping": {},
+      "monitoring": {
+        "enabled": false
+      },
+      "disableApiTermination": false,
+      "disableApiStop": false,
+      "clientToken": "a6ebe158-e432-4619-b73b-8ea6d1b1ae94",
+      "networkInterfaceSet": {
+        "items": [
+          {
+            "deviceIndex": 0,
+            "associatePublicIpAddress": true,
+            "groupSet": {
+              "items": [
+                {
+                  "groupId": "sg-0d72021efd8b50edc"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ebsOptimized": false,
+      "tagSpecificationSet": {
+        "items": [
+          {
+            "resourceType": "instance",
+            "tags": [
+              {
+                "key": "Name",
+                "value": "Testing"
+              }
+            ]
+          }
+        ]
+      },
+      "privateDnsNameOptions": {
+        "hostnameType": "ip-name",
+        "enableResourceNameDnsARecord": true,
+        "enableResourceNameDnsAAAARecord": false
+      }
+    },
+    "responseElements": {
+      "requestId": "c70774a5-fc88-43dc-95d5-f37e2a30c041",
+      "reservationId": "r-0674ddf4550e9f1a4",
+      "ownerId": "473132532554",
+      "groupSet": {},
+      "instancesSet": {
+        "items": [
+          {
+            "instanceId": "i-07f2aa603629c6397",
+            "imageId": "ami-06ca3ca175f37dd66",
+            "bootMode": "uefi-preferred",
+            "currentInstanceBootMode": "legacy-bios",
+            "instanceState": {
+              "code": 0,
+              "name": "pending"
+            },
+            "privateDnsName": "ip-172-31-27-12.ec2.internal",
+            "keyName": "passbolt",
+            "amiLaunchIndex": 0,
+            "productCodes": {},
+            "instanceType": "t2.micro",
+            "launchTime": 1689234628000,
+            "placement": {
+              "availabilityZone": "us-east-1d",
+              "tenancy": "default"
+            },
+            "monitoring": {
+              "state": "disabled"
+            },
+            "subnetId": "subnet-03652cf0e68655e85",
+            "vpcId": "vpc-054c5c80bf0e68776",
+            "privateIpAddress": "172.31.27.12",
+            "stateReason": {
+              "code": "pending",
+              "message": "pending"
+            },
+            "architecture": "x86_64",
+            "rootDeviceType": "ebs",
+            "rootDeviceName": "/dev/xvda",
+            "blockDeviceMapping": {},
+            "virtualizationType": "hvm",
+            "hypervisor": "xen",
+            "tagSet": {
+              "items": [
+                {
+                  "key": "Name",
+                  "value": "Testing"
+                }
+              ]
+            },
+            "clientToken": "a6ebe158-e432-4619-b73b-8ea6d1b1ae94",
+            "groupSet": {
+              "items": [
+                {
+                  "groupId": "sg-0d72021efd8b50edc",
+                  "groupName": "default"
+                }
+              ]
+            },
+            "sourceDestCheck": true,
+            "networkInterfaceSet": {
+              "items": [
+                {
+                  "networkInterfaceId": "eni-0ca39fe3d13a6262f",
+                  "subnetId": "subnet-03652cf0e68655e85",
+                  "vpcId": "vpc-054c5c80bf0e68776",
+                  "ownerId": "473132532554",
+                  "status": "in-use",
+                  "macAddress": "0a:bf:c4:4b:91:7d",
+                  "privateIpAddress": "172.31.27.12",
+                  "privateDnsName": "ip-172-31-27-12.ec2.internal",
+                  "sourceDestCheck": true,
+                  "interfaceType": "interface",
+                  "groupSet": {
+                    "items": [
+                      {
+                        "groupId": "sg-0d72021efd8b50edc",
+                        "groupName": "default"
+                      }
+                    ]
+                  },
+                  "attachment": {
+                    "attachmentId": "eni-attach-071ed3dd561de8507",
+                    "deviceIndex": 0,
+                    "networkCardIndex": 0,
+                    "status": "attaching",
+                    "attachTime": 1689234628000,
+                    "deleteOnTermination": true
+                  },
+                  "privateIpAddressesSet": {
+                    "item": [
+                      {
+                        "privateIpAddress": "172.31.27.12",
+                        "privateDnsName": "ip-172-31-27-12.ec2.internal",
+                        "primary": true
+                      }
+                    ]
+                  },
+                  "ipv6AddressesSet": {},
+                  "tagSet": {}
+                }
+              ]
+            },
+            "ebsOptimized": false,
+            "enaSupport": true,
+            "cpuOptions": {
+              "coreCount": 1,
+              "threadsPerCore": 1
+            },
+            "capacityReservationSpecification": {
+              "capacityReservationPreference": "open"
+            },
+            "enclaveOptions": {
+              "enabled": false
+            },
+            "metadataOptions": {
+              "state": "pending",
+              "httpTokens": "required",
+              "httpPutResponseHopLimit": 2,
+              "httpEndpoint": "enabled",
+              "httpProtocolIpv4": "enabled",
+              "httpProtocolIpv6": "disabled",
+              "instanceMetadataTags": "disabled"
+            },
+            "maintenanceOptions": {
+              "autoRecovery": "default"
+            },
+            "privateDnsNameOptions": {
+              "hostnameType": "ip-name",
+              "enableResourceNameDnsARecord": true,
+              "enableResourceNameDnsAAAARecord": false
+            }
+          }
+        ]
+      }
+    },
+    "requestID": "c70774a5-fc88-43dc-95d5-f37e2a30c041",
+    "eventID": "80797eb5-1b1a-4f87-aea6-106423e947d8",
+    "readOnly": false,
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "473132532554",
+    "eventCategory": "Management",
+    "sessionCredentialFromConsole": "true"
+  }
+}

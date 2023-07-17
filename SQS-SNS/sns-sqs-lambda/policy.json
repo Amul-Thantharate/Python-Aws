@@ -1,0 +1,17 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "sns.amazonaws.com"
+      },
+      "Action": "sqs:SendMessage",
+      "Resource": "#########", // SQS Queue ARN
+      "Condition": {
+        "ArnEquals": {
+          "aws:SourceArn": "#######" // SNS Topic ARN
+        }
+      }
+    }
+  ]
+}
